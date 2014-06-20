@@ -10,13 +10,18 @@ import re
 
 class MRCountFriend(MRJob):
 
-    def mapper(self, _, line):
+    def map_friends(self, _, line):
         val = line.split(' ')
         yield val[0], val[1]
         yield val[1], val[0]
 
-    def reducer(self, user_id, friend_id):
+    def create_friend_list(self, user_id, friend_id):
         yield user_id, list(friend_id)
+
+    def steps(self):
+        return [self.mr(mapper=self.map_friends,
+            reducer=self.create_friend_list)
+        ]
 
 if __name__ == '__main__':
     MRCountFriend.run()

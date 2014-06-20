@@ -1,5 +1,7 @@
 '''
 Example code pulled from pythonhosted.org
+
+Run a word file like README to see output of the word that appears most frequently
 '''
 from mrjob.job import MRJob
 import re
