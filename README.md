@@ -26,6 +26,7 @@ Example config file:
         ec2_key_pair: EMR
         ec2_key_pair_file: ~/.ssh/EMR.pem
         ssh_tunnel_to_job_tracker: true
+        aws_region: us-west-2
 
 To run the job on AWS use the following code:
     python <path/code to run job> -r emr <path data to process> --output-dir=s3://my_bucket/wc-out/ --no-output
@@ -33,3 +34,6 @@ To run the job on AWS use the following code:
 Note
 * output is where the data is stored
 * no output prevents data from being stored locally (good if the data is large)
+* make sure the pem file that is generated and used is in the same region that the emr is spun up
+* directly login to the emr with the following command:
+    ssh -i <path to pem file> hadoop@<Master public DNS>
