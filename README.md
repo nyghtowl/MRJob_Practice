@@ -2,6 +2,7 @@
 
 
 To run the code locally, use the following in the CLI:
+
     python <path/filename for code> <path/file to process> > <output filename>
 
 
@@ -29,6 +30,7 @@ Example config file:
         aws_region: us-west-2
 
 To run the job on AWS use the following code:
+
     python <path/code to run job> -r emr <path data to process> --output-dir=s3://my_bucket/wc-out/ --no-output
 
 Note
