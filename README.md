@@ -37,3 +37,6 @@ Note
 * make sure the pem file that is generated and used is in the same region that the emr is spun up
 * directly login to the emr with the following command:
     ssh -i <path to pem file> hadoop@<Master public DNS>
+
+* If pem file is public and setup in the config then -i is not needed
+* Can load script on S3 and run from there in addition to sending output to S3
