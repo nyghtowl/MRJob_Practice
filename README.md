@@ -42,3 +42,5 @@ Note
 
 * If pem file is public and setup in the config then -i is not needed
 * Can load script on S3 and run from there in addition to sending output to S3
+* You can pass gzipped files and MRJob will know how to process
+* If the json protocol is used for input on MRJob it will know how to parse json files. Even ones where there is a file with a json on each new line.
