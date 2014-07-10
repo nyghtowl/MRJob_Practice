@@ -44,3 +44,9 @@ Note
 * Can load script on S3 and run from there in addition to sending output to S3
 * You can pass gzipped files and MRJob will know how to process
 * If the json protocol is used for input on MRJob it will know how to parse json files. Even ones where there is a file with a json on each new line.
+* Bootstrap to configure ec2 instances with files:
+    bootstrap:
+    - sudo apt-get install -y python-pip
+    - sudo pip install python-dateutil
+* Also use Jar commands to load data from S3 onto HDFS before running the code. It may help speed up the process by unzipping and adequately distributing the files initially
+
