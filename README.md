@@ -49,4 +49,5 @@ Note
     - sudo apt-get install -y python-pip
     - sudo pip install python-dateutil
 * Also use Jar commands to load data from S3 onto HDFS before running the code. It may help speed up the process by unzipping and adequately distributing the files initially
+* Currently having trouble with JarStep syntax. If anyone has good examples, please send my way.
 
